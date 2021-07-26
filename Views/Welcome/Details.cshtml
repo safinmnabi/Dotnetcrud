@@ -1,0 +1,43 @@
+@model DOTNET.Models.Users
+
+@{
+    ViewBag.Title = "Title";
+    Layout = "~/Views/Shared/_Layouts.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(x => x.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(x => x.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(x => x.mobile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(x => x.mobile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(x => x.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(x => x.email)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @* @Html.ActionLink("Edit", "Edit", new { id = Model.Id}) | *@
+    @Html.ActionLink("Back to List", "Index")
+</p>

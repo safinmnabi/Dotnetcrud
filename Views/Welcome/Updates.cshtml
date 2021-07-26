@@ -1,0 +1,45 @@
+@model DOTNET.Models.Users
+@{
+    ViewBag.Title = "Update user";
+    Layout = null;
+}
+<!doctype html>
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="">
+	    <meta name="author" content="Safin nabi and Bootstrap contributors">
+	    <meta name="generator" content="Foxdos 1.84.0">
+	    <!-- Bootstrap core CSS -->
+		<link href="~/css/bootstrap.min.css" rel="stylesheet">
+
+
+    
+    	<!-- Custom styles for this template -->
+    	<link href="~/css/login.css" rel="stylesheet">
+  	</head>
+  	<body class="text-center">
+    
+		<main class="form-signin">
+		  <form method="post" asp-action="Updates">
+		  	<div class="form-floating">
+            <input type="hidden" name="EmailId" value="@ViewData["id"]">
+		      <input type="text" name="Name" value="@Model.Name" class="form-control" id="floatingInput" placeholder="James Bond">
+		      <label for="floatingInput">Fullname</label>
+		    </div>
+		    <div class="form-floating">
+		      <input type="text" name="mobile" value="@Model.mobile" class="form-control" id="floatingInput" placeholder=" Enter Your Mobile">
+		      <label for="floatingInput">Mobile</label>
+		    </div>
+		    <div class="form-floating">
+		      <input type="text" name="email" value="@Model.email" class="form-control" id="floatingPassword" placeholder="Job Title">
+		      <label for="floatingPassword">Job</label>
+		    </div>
+
+		    <button class="w-100 btn btn-lg btn-primary" type="submit">Update</button>
+		    <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
+		  </form>
+		</main>    
+  	</body>
+</html>

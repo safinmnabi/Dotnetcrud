@@ -1,0 +1,24 @@
+@* @model DOTNET.Models.SignIn
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layouts.cshtml";
+}
+<div class="register">
+			<h1>Register</h1>
+			<div class="links">
+				<a href="@Url.Action("Login", "Login")">Login</a>
+				<a href="@Url.Action("Register", "Login")" class="active">Register</a>
+			</div>
+			<form asp-action="Register" method="post" autocomplete="off">
+				<label asp-for="username">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" asp-for="username" placeholder="Username" id="username" required>
+				<label asp-for="password">
+					<i class="fas fa-lock"></i>
+				</label>
+				<input type="password"  asp-for="password" placeholder="Password" id="password" required>
+				<input type="submit" value="Register">
+			</form>
+		</div> *@

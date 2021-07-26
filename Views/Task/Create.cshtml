@@ -1,0 +1,40 @@
+@model DOTNET.Models.Tasks
+@{
+    ViewBag.Title = "Create Task";
+    Layout = null;
+}
+<!doctype html>
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="">
+	    <meta name="author" content="Safin nabi and Bootstrap contributors">
+	    <meta name="generator" content="Foxdos 1.84.0">
+	    <!-- Bootstrap core CSS -->
+		<link href="~/css/bootstrap.min.css" rel="stylesheet">
+
+
+    
+    	<!-- Custom styles for this template -->
+    	<link href="~/css/login.css" rel="stylesheet">
+  	</head>
+  	<body class="text-center">
+		<h1>@ViewData["uid"]</h1>
+		<main class="form-signin">
+		  <form method="post" asp-action="Create">
+		  	<div class="form-floating">
+			<input type="hidden" name="UserId" value="@ViewData["uid"]">
+		      <input type="text" name="Project" class="form-control" id="floatingInput" placeholder="Project">
+		      <label for="floatingInput">Project</label>
+		    </div>
+		    <div class="form-floating">
+		      <input type="text" name="Descibtion" class="form-control" id="floatingInput" placeholder=" Descibtion">
+		      <label for="floatingInput">Describtion</label>
+		    </div>
+		    <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
+		    <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
+		  </form>
+		</main>    
+  	</body>
+</html>
